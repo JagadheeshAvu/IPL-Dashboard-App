@@ -1,21 +1,25 @@
 // Write your code here
 
+import {Component} from 'react'
 import './index.css'
 
-const MatchCard = props => {
-  const {matchDetails} = props
-  const {competingTeam, competingTeamLogo, result, status} = matchDetails
-  return (
-    <li className="match-item">
-      <img
-        src={competingTeamLogo}
-        alt={`competing team ${competingTeam}`}
-        className="competing-team-logo"
-      />
-      <p className="result">{result}</p>
-      <p>{status}</p>
-    </li>
-  )
+class MatchCard extends Component {
+  render() {
+    const {matchDetails} = this.props
+    const {competingTeamLogo, competingTeam, matchStatus, result} = matchDetails
+    return (
+      <li className={`match-card ${matchStatus}`}>
+        <img
+          src={competingTeamLogo}
+          alt={competingTeam}
+          className="match-card"
+        />
+        <h1 className="team-name">{competingTeam}</h1>
+        <p className="match-status">{matchStatus}</p>
+        <p className="result">{result}</p>
+      </li>
+    )
+  }
 }
 
 export default MatchCard
