@@ -1,17 +1,21 @@
 /* Write your CSS here */
 
-.link {
+.link-item {
   text-decoration: none;
   width: 45%;
 }
 .team-card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
   background-color: #ffffff33;
   border: 1px solid #ffffff;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
   padding: 5px 10px 5px 10px;
-  margin: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
   min-height: 100px;
 }
 @media screen and (min-width: 768px) {
@@ -26,29 +30,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: 'center';
     min-height: 150px;
   }
 }
-.team-logo {
-  width: 70px;
-  margin-right: 20px;
-  margin-left: 10px;
+.team-card-image {
+  width: 50px;
+  height: 50px;
 }
 @media screen and (min-width: 768px) {
-  .team-logo {
-    width: 90px;
+  .team-card-image {
+    width: 80px;
+    height: 80px;
   }
 }
-.team-name {
+.team-card-name {
+  font-size: 15px;
+  font-weight: 500;
   font-family: 'Bree Serif';
-  font-size: 24px;
-  font-weight: 600;
   color: #ffffff;
+  margin-left: 10px;
   text-align: center;
 }
+
 @media screen and (min-width: 768px) {
-  .team-name {
-    font-size: 32px;
+  .team-card-name {
+    font-size: 25px;
+    margin-left: 30px;
   }
 }
